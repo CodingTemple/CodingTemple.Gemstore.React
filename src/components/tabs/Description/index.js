@@ -4,7 +4,7 @@ export default class Description extends Component {
   render() {
     return (
       <div>
-        This is the Description tab.
+        {this.props.gem.description}
       </div>
     )
   }

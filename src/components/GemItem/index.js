@@ -18,7 +18,7 @@ export default class GemItem extends Component {
             </div>
           </div>
           <div className="card-footer">
-            <PanelTabs />
+            <PanelTabs gem={gem} />
           </div>
         </div>
         <br />

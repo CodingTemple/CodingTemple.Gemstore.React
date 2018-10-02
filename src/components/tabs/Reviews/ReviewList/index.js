@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import ReviewItem from '../ReviewItem';
 
 export default class ReviewList extends Component {
   render() {
     return (
       <div>
-        This is the ReviewList component.
+        {this.props.gem.reviews.map(review => <ReviewItem review={review} />)}
       </div>
     )
   }
