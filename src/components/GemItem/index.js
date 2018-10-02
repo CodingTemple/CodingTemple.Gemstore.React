@@ -13,7 +13,7 @@ export default class GemItem extends Component {
           <img className="card-img-top" src="http://placehold.it/500x500" alt="Card" />
           <div className="card-body">
             <div className="text-center">
-              <button className="btn btn-success" onClick={this.props.onAddToCart}>Add to cart</button>
+              <button className="btn btn-success" onClick={() => this.props.onAddToCart(gem)}>Add to cart</button>
             </div>
           </div>
         </div>

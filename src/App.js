@@ -7,12 +7,31 @@ import Weather from './components/views/Weather';
 import gems from './static/data/gems';
 
 class App extends Component {
-  addToCart = () => console.log(this);
+  constructor() {
+    super()
+
+    this.state = {
+      cart: [],
+      cartTotal: 0,
+    };
+  }
+
+  updateCart = () => {
+
+  }
+
+  addToCart = cartItem => {
+    let currentCart = this.state.cart;
+    currentCart.push(cartItem);
+    this.setState({
+      cart: currentCart
+    });
+  };
 
   render() {
     return (
       <div>
-        <Navigation />
+        <Navigation cart={this.state.cart} />
         <div className="container">
           <Switch>
             <Route exact path="/" render={() => <Home gems={gems} onAddToCart={this.addToCart} />}></Route>
