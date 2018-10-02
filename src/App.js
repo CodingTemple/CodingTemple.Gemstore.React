@@ -13,6 +13,7 @@ class App extends Component {
     this.state = {
       cart: [],
       cartTotal: 0,
+      gems: gems
     };
   }
 
