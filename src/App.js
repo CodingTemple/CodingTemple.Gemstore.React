@@ -7,13 +7,15 @@ import Weather from './components/views/Weather';
 import gems from './static/data/gems';
 
 class App extends Component {
+  addToCart = () => console.log(this);
+
   render() {
     return (
       <div>
         <Navigation />
         <div className="container">
           <Switch>
-            <Route exact path="/" render={() => <Home gems={gems} />}></Route>
+            <Route exact path="/" render={() => <Home gems={gems} onAddToCart={this.addToCart} />}></Route>
             <Route exact path="/weather" component={Weather}></Route>
           </Switch>
         </div>
