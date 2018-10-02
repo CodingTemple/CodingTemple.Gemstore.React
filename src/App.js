@@ -16,8 +16,15 @@ class App extends Component {
     };
   }
 
-  updateCart = () => {
-
+  updateCartTotal = () => {
+    let existingTotal = this.state.cartTotal;
+    existingTotal = 0;
+    this.state.cart.forEach(item => {
+      existingTotal += item.price;
+    });
+    return this.setState({
+      cartTotal: existingTotal
+    })
   }
 
   addToCart = cartItem => {
@@ -26,12 +33,13 @@ class App extends Component {
     this.setState({
       cart: currentCart
     });
+    this.updateCartTotal();
   };
 
   render() {
     return (
       <div>
-        <Navigation cart={this.state.cart} />
+        <Navigation cart={this.state.cart} cartTotal={this.state.cartTotal} />
         <div className="container">
           <Switch>
             <Route exact path="/" render={() => <Home gems={gems} onAddToCart={this.addToCart} />}></Route>

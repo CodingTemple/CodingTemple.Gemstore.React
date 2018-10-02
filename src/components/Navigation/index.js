@@ -23,7 +23,7 @@ export default class Navigation extends Component {
             </ul>
             <ul className="navbar-nav m1-auto">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/"><span className="fas fa-shopping-cart"> {this.props.cart.length} | $0.00</span></NavLink>
+                <NavLink className="nav-link" to="/"><span className="fas fa-shopping-cart"> {this.props.cart.length} | {`$${Number(this.props.cartTotal).toFixed(2)}`}</span></NavLink>
               </li>
             </ul>
           </div>
