@@ -5,7 +5,7 @@ export default class Reviews extends Component {
   render() {
     return (
       <div>
-        <ReviewList />
+        <ReviewList gem={this.props.gem} />
       </div>
     )
   }

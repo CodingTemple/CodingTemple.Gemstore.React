@@ -17,19 +17,19 @@ export default class PanelTabs extends Component {
         <TabList>
           <ul className="nav nav-tabs">
             <Tab className="nav-item">
-              <a className="nav-link" href="#" onClick={this.handleClick}>Description</a>
+              <a className="nav-link" href="/" onClick={this.handleClick}>Description</a>
             </Tab>
             <Tab className="nav-item">
-              <a className="nav-link" href="#" onClick={this.handleClick}>Specs</a>
+              <a className="nav-link" href="/" onClick={this.handleClick}>Specs</a>
             </Tab>
             <Tab className="nav-item">
-              <a className="nav-link" href="#" onClick={this.handleClick}>Reviews</a>
+              <a className="nav-link" href="/" onClick={this.handleClick}>Reviews</a>
             </Tab>
           </ul>
         </TabList>
-        <TabPanel><Description /></TabPanel>
+        <TabPanel><Description gem={this.props.gem} /></TabPanel>
         <TabPanel><Specs /></TabPanel>
-        <TabPanel><Reviews /></TabPanel>
+        <TabPanel><Reviews gem={this.props.gem} /></TabPanel>
       </Tabs>
     )
   }
