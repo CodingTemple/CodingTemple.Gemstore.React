@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './main.css';
+import PanelTabs from '../tabs';
 
 export default class GemItem extends Component {
-  render() {
+    render() {
 
     const gem = this.props.gem;
 
@@ -15,6 +16,9 @@ export default class GemItem extends Component {
             <div className="text-center">
               <button className="btn btn-success" onClick={() => this.props.onAddToCart(gem)}>Add to cart</button>
             </div>
+          </div>
+          <div className="card-footer">
+            <PanelTabs />
           </div>
         </div>
         <br />
