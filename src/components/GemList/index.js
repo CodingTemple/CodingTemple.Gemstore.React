@@ -6,7 +6,7 @@ export default class GemList extends Component {
     return (
       <div>
         <div className="row">
-          <GemItem />
+          {this.props.gems.map((gem, key) => <GemItem key={gem.id} gem={gem} />)}
         </div>
       </div>
     )

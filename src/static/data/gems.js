@@ -5,7 +5,7 @@ const gems = [
     price: 2.95,
     description:
       "Some gems have hidden qualities beyonf their lustre, beyond their shine... Dodecahredon is one of those gems",
-    imagePath: "../img/gem-01.gif",
+    imagePath: "./static/img/gem-01.gif",
     inventory: 10,
     reviews: [
       {
@@ -30,7 +30,7 @@ const gems = [
     price: 5.95,
     description:
       "The origin of the pentagonal gem is unknown, hence it's low value",
-    imagePath: "../img/gem-02.gif",
+    imagePath: "./static/img/gem-02.gif",
     inventory: 0,
     reviews: [
       {
@@ -54,7 +54,7 @@ const gems = [
     name: "Hexagonal",
     price: 12.95,
     description: "The hexagonal gem is one of our best sellers",
-    imagePath: "../img/gem-03.gif",
+    imagePath: "./static/img/gem-03.gif",
     inventory: 10,
     reviews: [
       {

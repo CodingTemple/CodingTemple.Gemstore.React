@@ -5,7 +5,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <GemList />
+        <GemList gems={this.props.gems} />
       </div>
     )
   }

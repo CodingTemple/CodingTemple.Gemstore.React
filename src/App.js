@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import {Switch, Route} from 'react-router-dom';
 import Home from './components/views/Home';
 import Weather from './components/views/Weather';
+import gems from './static/data/gems';
 
 class App extends Component {
   render() {
@@ -12,7 +13,7 @@ class App extends Component {
         <Navigation />
         <div className="container">
           <Switch>
-            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/" render={() => <Home gems={gems} />}></Route>
             <Route exact path="/weather" component={Weather}></Route>
           </Switch>
         </div>
