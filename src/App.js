@@ -37,11 +37,9 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch("data/gems.json").then(response => {
-      return response.json()
-    }).then(json => {
-      this.setState({gems: json})
-    });
+    fetch("data/gems.json")
+      .then(response => response.json())
+      .then(json => this.setState({gems: json}));
   }
 
   render() {
