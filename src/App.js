@@ -4,7 +4,6 @@ import Navigation from './components/Navigation';
 import {Switch, Route} from 'react-router-dom';
 import Home from './components/views/Home';
 import Weather from './components/views/Weather';
-import gems from './static/data/gems';
 
 class App extends Component {
   constructor() {
@@ -13,7 +12,7 @@ class App extends Component {
     this.state = {
       cart: [],
       cartTotal: 0,
-      gems: gems
+      gems: []
     };
   }
 
@@ -37,13 +36,21 @@ class App extends Component {
     this.updateCartTotal();
   };
 
+  componentDidMount() {
+    fetch("data/gems.json").then(response => {
+      return response.json()
+    }).then(json => {
+      this.setState({gems: json})
+    });
+  }
+
   render() {
     return (
       <div>
         <Navigation cart={this.state.cart} cartTotal={this.state.cartTotal} />
         <div className="container">
           <Switch>
-            <Route exact path="/" render={() => <Home gems={gems} onAddToCart={this.addToCart} />}></Route>
+            <Route exact path="/" render={() => <Home gems={this.state.gems} onAddToCart={this.addToCart} />}></Route>
             <Route exact path="/weather" component={Weather}></Route>
           </Switch>
         </div>
