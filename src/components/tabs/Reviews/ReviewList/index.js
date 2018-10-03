@@ -47,8 +47,8 @@ export default class ReviewList extends Component {
         <h5>Submit a review</h5>
         <form onSubmit={this.submitReview}>
           <div className="form-group">
-            <select className="form-control" name="rating" id="">
-              <option disabled selected>Rate this product</option>
+            <select className="form-control" name="rating" id="" defaultValue="0">
+              <option value="0" disabled>Rate this product</option>
               <option value="1">&#9733;</option>
               <option value="2">&#9733;&#9733;</option>
               <option value="3">&#9733;&#9733;&#9733;</option>
