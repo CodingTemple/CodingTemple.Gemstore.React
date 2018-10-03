@@ -20,10 +20,16 @@ export default class Navigation extends Component {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/weather">Weather</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/barchart">Barchart API</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/f1-racer">F1 Racer API</NavLink>
+              </li>
             </ul>
             <ul className="navbar-nav m1-auto">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/"><span className="fas fa-shopping-cart"> {this.props.cart.length} | {`$${Number(this.props.cartTotal).toFixed(2)}`}</span></NavLink>
+                <NavLink className="nav-link" to="/"><span className="fas fa-shopping-cart"> {this.props.cart.length} | {`$${Number(this.props.cartTotal).toFixed(2)}`}</span> | <button className="btn btn-sm btn-danger" onClick={this.props.onEmptyCart}>Clear Cart</button></NavLink>
               </li>
             </ul>
           </div>

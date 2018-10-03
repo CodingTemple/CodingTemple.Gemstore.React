@@ -8,7 +8,8 @@ export default class ReviewList extends Component {
 
     this.state = {
       reviewList:  this.props.gem.reviews,
-    }
+      selected: "Rate this product"
+    };
   }
 
   submitReview = e => {
@@ -23,6 +24,9 @@ export default class ReviewList extends Component {
       body,
       author
     };
+    e.target.elements.rating.value = "";
+    e.target.elements.body.value = "";
+    e.target.elements.author.value = "";
     rating && body && author ? this.addReview(newReview) : alert("Invalid Review");
     console.log("Review submitted");
   }
@@ -40,17 +44,11 @@ export default class ReviewList extends Component {
     return (
       <div>
         {this.state.reviewList.map((review, key) => <ReviewItem reviewList={this.state.reviewList} key={review.id} review={review} />)}
-        <div>
-          <blockquote>
-            <h6>{this.state.reviewRating} | {this.state.reviewBody}</h6>
-            &mdash; {this.state.reviewAuthor}
-          </blockquote>
-        </div>
         <h5>Submit a review</h5>
         <form onSubmit={this.submitReview}>
           <div className="form-group">
-            <select className="form-control" name="rating" id="">
-              <option disabled value="Rate this product"></option>
+            <select className="form-control" name="rating" id="" defaultValue="0">
+              <option value="0" disabled>Rate this product</option>
               <option value="1">&#9733;</option>
               <option value="2">&#9733;&#9733;</option>
               <option value="3">&#9733;&#9733;&#9733;</option>
