@@ -4,6 +4,8 @@ import Navigation from './components/Navigation';
 import {Switch, Route} from 'react-router-dom';
 import Home from './components/views/Home';
 import Weather from './components/views/Weather';
+import BarChart from './components/views/Barchart';
+import Racer from './components/views/Racer';
 
 class App extends Component {
   constructor() {
@@ -52,6 +54,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() => <Home gems={this.state.gems} onAddToCart={this.addToCart} />}></Route>
             <Route exact path="/weather" component={Weather}></Route>
+            <Route exact path="/barchart" component={BarChart}></Route>
+            <Route exact path="/f1-racer" component={Racer}></Route>
           </Switch>
         </div>
       </div>

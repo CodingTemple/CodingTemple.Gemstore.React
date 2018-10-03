@@ -20,6 +20,12 @@ export default class Navigation extends Component {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/weather">Weather</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/barchart">Barchart API</NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/f1-racer">F1 Racer API</NavLink>
+              </li>
             </ul>
             <ul className="navbar-nav m1-auto">
               <li className="nav-item">
