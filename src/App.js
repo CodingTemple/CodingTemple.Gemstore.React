@@ -36,6 +36,8 @@ class App extends Component {
     this.updateCartTotal();
   };
 
+  emptyCart = () => this.setState({cart: [], cartTotal: 0});
+
   componentDidMount() {
     fetch("data/gems.json")
       .then(response => response.json())
@@ -45,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navigation cart={this.state.cart} cartTotal={this.state.cartTotal} />
+        <Navigation onEmptyCart={this.emptyCart} cart={this.state.cart} cartTotal={this.state.cartTotal} />
         <div className="container">
           <Switch>
             <Route exact path="/" render={() => <Home gems={this.state.gems} onAddToCart={this.addToCart} />}></Route>
