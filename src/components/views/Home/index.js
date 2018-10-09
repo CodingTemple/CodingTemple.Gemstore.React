@@ -6,7 +6,6 @@ export default class Home extends Component {
     return (
       <div>
         <GemList
-          gems={this.props.gems} 
           onAddToCart={this.props.onAddToCart}
         />
       </div>

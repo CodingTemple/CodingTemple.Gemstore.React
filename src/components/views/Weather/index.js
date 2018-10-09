@@ -4,7 +4,7 @@ export default class Weather extends Component {
   render() {
     return (
       <div>
-        This is the weather page.
+        This is the Weather API page.
       </div>
     )
   }

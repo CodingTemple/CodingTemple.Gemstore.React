@@ -7,18 +7,18 @@ export default class Navigation extends Component {
     return (
       <div>
         <nav className="navbar navbar-fixed navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="/">Coding Temple Gemstore</a>
+          {/* <a className="navbar-brand" href="/">Coding Temple Gemstore</a>
           <button className="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
               aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
-          </button>
+          </button> */}
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li className="nav-item active">
-                <NavLink className="nav-link" to="/">Home <span className="sr-only">(current)</span></NavLink>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/weather">Weather</NavLink>
+                <NavLink className="nav-link" to="/weather">Weather API</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/barchart">Barchart API</NavLink>

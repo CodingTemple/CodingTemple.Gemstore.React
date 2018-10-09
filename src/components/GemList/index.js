@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import GemItem from '../GemItem';
 
-export default class GemList extends Component {
+import { connect } from 'react-redux'
+
+function mapStateToProps(state) {
+  return {
+    gems: state.default
+  };
+}
+
+class GemList extends Component {
   render() {
     return (
       <div>
@@ -12,3 +20,5 @@ export default class GemList extends Component {
     )
   }
 }
+
+export default connect(mapStateToProps)(GemList)
